@@ -13,14 +13,14 @@ CREATE TABLE prioridad (
     nombre VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE abogado (
+CREATE TABLE abogados (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(250) NOT NULL,
     apellido VARCHAR(250) NOT NULL,
     fecha_registro DATE NOT NULL
 );
 
-CREATE TABLE empresa (
+CREATE TABLE empresas (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(250) NOT NULL,
     descripcion VARCHAR(250) NOT NULL,
