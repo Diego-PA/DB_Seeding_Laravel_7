@@ -27,10 +27,13 @@ CREATE TABLE empresas (
     telefono VARCHAR(10) NOT NULL,
     correo VARCHAR(250),
     direccion VARCHAR(250) NOT NULL,
-    id_prioridad INT REFERENCES prioridad(id)
+    id_prioridad BIGINT UNSIGNED NOT NULL,
+    FOREIGN KEY (id_prioridad) REFERENCES prioridad(id)
 );
 
 CREATE TABLE empresa_abogado(
-    id_abogado INT REFERENCES abogado(id),
-    id_empresa INT REFERENCES empresa(id)
+    id_abogado BIGINT UNSIGNED NOT NULL,
+    id_empresa BIGINT UNSIGNED NOT NULL,
+    FOREIGN KEY (id_abogado) REFERENCES abogados(id),
+    FOREIGN KEY (id_empresa) REFERENCES empresas(id)
 );

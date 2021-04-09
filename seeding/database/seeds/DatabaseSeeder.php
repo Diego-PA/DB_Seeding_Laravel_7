@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+
+        //Inserción en prioridad
+        DB::table('prioridad')->insert(['nombre' =>  'Alta']);
+
+        //Inserción en abogados
+        DB::table('abogados')->insert(['nombre' =>  'Juan',
+                                       'apellido' =>  'Hernández',
+                                       'fecha_registro' =>  '2003-12-31'
+                                       ]);
+
     }
 }
+
