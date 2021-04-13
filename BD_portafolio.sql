@@ -37,3 +37,7 @@ CREATE TABLE empresa_abogado(
     FOREIGN KEY (id_abogado) REFERENCES abogados(id),
     FOREIGN KEY (id_empresa) REFERENCES empresas(id)
 );
+
+INSERT INTO prioridad (nombre) VALUES ('Alta');
+INSERT INTO prioridad (nombre) VALUES ('Media');
+INSERT INTO prioridad (nombre) VALUES ('Baja');
